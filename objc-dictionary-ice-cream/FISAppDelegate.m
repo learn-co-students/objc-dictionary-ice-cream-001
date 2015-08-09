@@ -41,7 +41,7 @@
 
 -(NSDictionary *) countsOfIceCream:(NSDictionary *)iceCreamByName{
     
-    NSMutableDictionary * dic = [[NSMutableDictionary alloc] init];ter
+    NSMutableDictionary * dic = [[NSMutableDictionary alloc] init];
     
     dic = @{ @"Peanut Butter and Chocolate" : @1     ,
                                    @"Natural Vanilla"             : @3     ,
