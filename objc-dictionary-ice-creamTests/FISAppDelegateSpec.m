@@ -70,6 +70,13 @@ describe(@"FISAppDelegate", ^{
     });
     
     
+    
+
+
+    
+    
+    
+    
 });
 
 SpecEnd
