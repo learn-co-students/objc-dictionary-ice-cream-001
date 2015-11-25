@@ -26,4 +26,42 @@
  
  */
 
+
+- (NSArray *)namesForIceCream: (NSString *)iceCream {
+    NSDictionary * iceCreamPreference =  @{ @"Joe"    :@"Peanut Butter and Chocolate",
+                                            @"Tim"    :@"Natural Vanilla"            ,
+                                            @"Sophie" :@"Mexican Chocolate"          ,
+                                            @"Deniz"  :@"Natural Vanilla"            ,
+                                            @"Tom"    :@"Mexican Chocolate"          ,
+                                            @"Jim"    :@"Natural Vanilla"            ,
+                                            @"Mark"   :@"Cookies 'n Cream"          };
+
+   
+    NSMutableArray * final = [[NSMutableArray alloc]init];
+    for (NSString *key in iceCreamPreference) {
+        NSString *test = iceCreamPreference[key];
+        if ([iceCream isEqualToString:test]) {
+            [final addObject:key];
+        }
+    }
+    return final;
+
+}
+
+- (NSDictionary *)countsOfIceCream: (NSDictionary *)iceCreamName {
+    NSMutableDictionary *final = [[NSMutableDictionary alloc]init];
+    for (NSString *key in iceCreamName) {
+        NSString *iceCream = iceCreamName[key];
+        NSInteger iceCreamCount = [[self namesForIceCream:iceCream]count];
+        NSNumber *nIceCreamCount = @(iceCreamCount);
+        if (![[final allKeys] containsObject:iceCream]) {
+            [final setObject:nIceCreamCount forKey:iceCream];
+        }
+    }
+    
+    return final;
+}
+
 @end
+
+                  
